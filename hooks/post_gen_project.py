@@ -8,6 +8,7 @@ Does the following:
 from __future__ import print_function
 import os
 import shutil
+import shlex
 from subprocess import Popen
 
 # Get the root project directory
@@ -69,6 +70,16 @@ def remove_cobra_files():
         PROJECT_DIRECTORY, "cmd"
     ))
 
+def run_gofmt():
+    """
+    Cleans up go code
+    """
+    args = shlex.split("gofmt -w %s" % PROJECT_DIRECTORY)
+    p = Popen(args)
+    p.wait()
+    if p.returncode != 0:
+        raise OSError
+
 # 1. Remove Dockerfiles if docker is not going to be used
 if '{{ cookiecutter.use_docker }}'.lower() != 'y':
     remove_docker_files()
@@ -94,7 +105,10 @@ else:
 if '{{ cookiecutter.use_cobra }}' != 'y':
     remove_cobra_files()
 
-# 6. Initialize Git (should be run after all file have been modified or deleted)
+# 6. Run gofmt
+run_gofmt()
+
+# 7. Initialize Git (should be run after all file have been modified or deleted)
 if '{{ cookiecutter.use_git }}'.lower() == 'y':
     init_git()
 else:
