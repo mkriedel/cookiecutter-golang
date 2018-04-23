@@ -73,7 +73,7 @@ func initConfig() {
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
-	}{% else %}
+	}{% else -%}
 func init() {
     // Cobra also supports local flags, which will only run
 	// when this action is called directly.
