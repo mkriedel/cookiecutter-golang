@@ -1,6 +1,6 @@
 {
-    "full_name": "Luis Morales",
-    "github_username": "lacion",
+    "full_name": "My Name",
+    "stash_username": "myn",
     "app_name": "mygolangproject",
     "project_short_description": "A Golang project.",
     "docker_hub_username": "lacion",
@@ -10,5 +10,6 @@
     "use_git": "y",
     "use_logrus_logging": "y",
     "use_viper_config": "y",
+    "use_cobra": "y",
     "use_ci": ["travis", "circle", "none"]
 }
