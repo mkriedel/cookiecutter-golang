@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"os"
 
-{% if cookiecutter.use_viper_config != "y" %}    homedir "github.com/mitchellh/go-homedir"{% endif %}
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
+{% if cookiecutter.use_viper_config != "y" %}    homedir "github.com/mitchellh/go-homedir"
+    "github.com/spf13/viper"{% endif %}
+    "github.com/spf13/cobra"
+
 
 	{% if cookiecutter.use_viper_config == "y" %}"bitbucket.orionhealth.global/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/config"{% endif %}
 )
