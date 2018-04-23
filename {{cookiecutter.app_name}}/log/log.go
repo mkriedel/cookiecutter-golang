@@ -58,7 +58,7 @@ func newLogrusLogger(cfg config.Provider) *logrus.Logger {
 func newLogrusLogger() *logrus.Logger {
 {% endif %}
 	l := logrus.New()
-    {-% if cookiecutter.use_viper_config == "y" %}
+    {%- if cookiecutter.use_viper_config == "y" %}
 	if cfg.GetBool("json_logs") {
 		l.Formatter = new(logrus.JSONFormatter)
 	}
@@ -74,7 +74,7 @@ func newLogrusLogger() *logrus.Logger {
 	default:
 		l.Level = logrus.DebugLevel
 	}
-	{-% endif %}
+	{%- endif %}
 	return l
 }
 
