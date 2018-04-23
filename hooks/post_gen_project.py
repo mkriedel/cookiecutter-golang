@@ -91,7 +91,7 @@ else:
     remove_file("circle.yml")
 
 # 5. Remove unused cobra if not selected
-if '{{ cookicutter.use_cobra }}' != 'y':
+if '{{ cookiecutter.use_cobra }}' != 'y':
     remove_cobra_files()
 
 # 6. Initialize Git (should be run after all file have been modified or deleted)
