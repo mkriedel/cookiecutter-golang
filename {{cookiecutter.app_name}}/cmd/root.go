@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	{% if cookiecutter.use_viper_config == "y" %}"bitbucket.orionhealth.global/{{cookiecutter.stash_username}}/{{cookiecutter.app_name}}/config"{% endif %}
+	{% if cookiecutter.use_viper_config == "y" %}"bitbucket.orionhealth.global/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/config"{% endif %}
 )
 
 {% if cookiecutter.use_viper_config != "y" %}var cfgFile string{% endif %}

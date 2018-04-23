@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	{% if cookiecutter.use_cobra == "y" %}bitbucket.orionhealth.global/{{cookiecutter.stash_username}}/{{cookiecutter.app_name}}/cmd{% endif %}
+	{% if cookiecutter.use_cobra == "y" %}bitbucket.orionhealth.global/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/cmd{% endif %}
 )
 
 func main() {

@@ -1,6 +1,6 @@
 {
     "full_name": "My Name",
-    "stash_username": "myn",
+    "github_username": "myn",
     "app_name": "mygolangproject",
     "project_short_description": "A Golang project.",
     "docker_hub_username": "lacion",
