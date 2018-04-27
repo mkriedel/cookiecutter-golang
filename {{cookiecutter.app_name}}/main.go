@@ -1,10 +1,9 @@
 package main
 
 import (
+{% if cookiecutter.use_cobra == "y" %}    "bitbucket.orionhealth.global/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/cmd"{% else %}
 	"flag"
-	"fmt"
-
-{% if cookiecutter.use_cobra == "y" %}    "bitbucket.orionhealth.global/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/cmd"{% endif %}
+	"fmt"{% endif %}
 )
 
 func main() {
